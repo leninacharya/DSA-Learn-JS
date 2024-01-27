@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+    <script>
+      // Traverseing or accessing
+      let data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //   for (let i = 0; i < data.length; i++) {
+      //     document.write(`${data[i]}</br>`);
+      //   }
+
+      //show this number
+      //   let x = 3;
+      //   document.write(data[2]);
+
+      // gettng value from data array through input box ans showing in alert
+      function getElement() {
+        let e1 = document.querySelector("#element").value;
+        if (e1 > data.length) {
+          alert("Out of range");
+        } else e1 = parseInt(e1);
+
+        if (isNaN(e1) || e1 < 0 || e1 >= data.length) {
+          alert("Out of range or invalid input");
+        } else {
+          alert(data[e1]);
+        }
+      }
+    </script>
+  </body>
+</html>
